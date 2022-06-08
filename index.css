@@ -1,0 +1,11 @@
+section[class^="tip"] {
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+section[class^="tip"] header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,9 @@
+/* 一行文本超出 */
+div {
+  overflow: hidden; text-overflow:ellipsis; white-space: nowrap;
+}
+
+/* 多行文本超出 */
+div {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}

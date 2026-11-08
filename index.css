@@ -329,6 +329,10 @@ h1 {
   background: #17181c;
 }
 
+#tip-003 .demo iframe {
+  background: #0d0f16;
+}
+
 /* ---------- 代码区（Okaidia 深色主题） ---------- */
 
 .code {

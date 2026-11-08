@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>聚光灯遮罩 · demo</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* ↓ 仅为演示页排版，不属于 tip 代码 */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background-color: #0d0f16;
+      background-image:
+        radial-gradient(160px 160px at 18% 22%, rgba(255, 196, 87, .85), transparent 70%),
+        radial-gradient(200px 200px at 82% 26%, rgba(255, 97, 136, .75), transparent 70%),
+        radial-gradient(240px 240px at 72% 84%, rgba(35, 213, 171, .6), transparent 72%),
+        radial-gradient(320px 320px at 48% 50%, rgba(255, 214, 140, .85), transparent 72%),
+        linear-gradient(160deg, #23405c 0%, #2b2340 50%, #14101b 100%);
+      font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .camera {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .spotlight {
+      position: relative;
+      width: min(210px, 56vmin);
+      aspect-ratio: 1;
+      border-radius: 18px;
+    }
+
+    .corner {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border: 2px solid rgba(255, 255, 255, .92);
+    }
+
+    .corner.tl {
+      top: 0;
+      left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-top-left-radius: 16px;
+    }
+
+    .corner.tr {
+      top: 0;
+      right: 0;
+      border-left: 0;
+      border-bottom: 0;
+      border-top-right-radius: 16px;
+    }
+
+    .corner.bl {
+      bottom: 0;
+      left: 0;
+      border-right: 0;
+      border-top: 0;
+      border-bottom-left-radius: 16px;
+    }
+
+    .corner.br {
+      bottom: 0;
+      right: 0;
+      border-left: 0;
+      border-top: 0;
+      border-bottom-right-radius: 16px;
+    }
+
+    .scan {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(140, 255, 220, .95), transparent);
+      box-shadow: 0 0 14px rgba(140, 255, 220, .8);
+      animation: scan 2.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes scan {
+      from {
+        top: 12%;
+      }
+
+      to {
+        top: 86%;
+      }
+    }
+
+    .hint {
+      position: relative;
+      margin: 0;
+      font-size: 13px;
+      letter-spacing: .08em;
+      color: rgba(255, 255, 255, .78);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scan {
+        animation: none;
+        top: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="camera">
+    <div class="spotlight" role="img" aria-label="扫码取景框">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+      <span class="scan"></span>
+    </div>
+    <p class="hint">将二维码放入框内，即可自动扫描</p>
+  </main>
+</body>
+
+</html>

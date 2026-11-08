@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSS Tips · 随时翻看的 CSS 效果速查</title>
-  <meta name="description" content="自包含的 CSS 效果收藏夹：每个技巧都有可运行的 demo、源码和笔记。">
+  <meta name="description" content="自包含的 CSS 效果收藏夹：每个技巧都有可运行的 demo 和源码。">
   <link rel="stylesheet" href="./assets/prism.css">
   <link rel="stylesheet" href="./index.css">
 </head>
@@ -16,7 +16,7 @@
       <div class="brand">
         <p class="eyebrow">CHEATSHEET</p>
         <h1>CSS Tips</h1>
-        <p class="tagline">随时翻看的 CSS 效果收藏夹 · <span id="tip-count">2</span> 条 · demo 与源码都在仓库里</p>
+        <p class="tagline">随时翻看的 CSS 效果收藏夹 · <span id="tip-count">3</span> 条 · demo 与源码都在仓库里</p>
       </div>
 
       <div class="search">
@@ -40,6 +40,10 @@
       <div class="toc-group">
         <p class="toc-cat">动画</p>
         <a class="toc-link" href="#tip-002"><span class="toc-no">02</span>打字效果</a>
+      </div>
+      <div class="toc-group">
+        <p class="toc-cat">遮罩</p>
+        <a class="toc-link" href="#tip-003"><span class="toc-no">03</span>聚光灯遮罩</a>
       </div>
       <p class="toc-empty" id="toc-empty" hidden>没有匹配的条目</p>
     </aside>
@@ -94,6 +98,32 @@
             <span class="code-name">style.css</span>
           </div>
           <pre class="language-css" data-src="./tips/002-typing-effect/style.css"></pre>
+        </div>
+      </section>
+
+      <section class="tip" id="tip-003"
+        data-search="聚光灯 遮罩 镂空 挖空 蒙层 spotlight mask box-shadow 取景框 扫码 扫描 拍照 相机 手机">
+        <header class="tip-head">
+          <span class="tip-no" aria-hidden="true">03</span>
+          <div class="tip-title">
+            <h2>聚光灯遮罩 <span class="tag">遮罩</span><span class="tag">box-shadow</span></h2>
+            <p>巨幅 spread 阴影铺满四周，只留元素所在的区域透空，手机扫码取景框的经典做法。</p>
+          </div>
+        </header>
+
+        <div class="demo">
+          <div class="demo-bar">
+            <span class="demo-path">tips/003-spotlight-mask/demo.html</span>
+            <a class="demo-open" href="./tips/003-spotlight-mask/demo.html" target="_blank" rel="noopener">新窗口打开 ↗</a>
+          </div>
+          <iframe src="./tips/003-spotlight-mask/demo.html" title="聚光灯遮罩效果演示" loading="lazy"></iframe>
+        </div>
+
+        <div class="code">
+          <div class="code-bar">
+            <span class="code-name">style.css</span>
+          </div>
+          <pre class="language-css" data-src="./tips/003-spotlight-mask/style.css"></pre>
         </div>
       </section>
 

@@ -27,7 +27,10 @@ python3 -m http.server 8000
     ├── 001-text-overflow/
     │   ├── demo.html       # 可独立打开的演示页
     │   └── style.css       # 技巧本身（首页展示的代码）
-    └── 002-typing-effect/
+    ├── 002-typing-effect/
+    │   ├── demo.html
+    │   └── style.css
+    └── 003-spotlight-mask/
         ├── demo.html
         └── style.css
 ```

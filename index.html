@@ -1,40 +1,168 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8" />
-  <title>CSS Tips</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Tips · 随时翻看的 CSS 效果速查</title>
+  <meta name="description" content="自包含的 CSS 效果收藏夹：每个技巧都有可运行的 demo、源码和笔记。">
   <link rel="stylesheet" href="./assets/prism.css">
   <link rel="stylesheet" href="./index.css">
 </head>
 
-<body>
-  <section class="tip1">
-    <header>文本超出...</header>
-    <pre class="language-css" data-src="./example/tip1.css"></pre>
+<body id="top">
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <p class="eyebrow">CHEATSHEET</p>
+        <h1>CSS Tips</h1>
+        <p class="tagline">随时翻看的 CSS 效果收藏夹 · <span id="tip-count">2</span> 条 · demo 与源码都在仓库里</p>
+      </div>
 
-    <iframe height="300" style="width: 100%;" scrolling="no" title="CSS文本超出..."
-      src="https://codepen.io/ximuli/embed/QWQZbmK?default-tab=html%2Cresult" frameborder="no" loading="lazy"
-      allowtransparency="true" allowfullscreen="true">
-      See the Pen <a href="https://codepen.io/ximuli/pen/QWQZbmK">
-        CSS文本超出...</a> by ximuli (<a href="https://codepen.io/ximuli">@ximuli</a>)
-      on <a href="https://codepen.io">CodePen</a>.
-    </iframe>
-  </section>
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <input id="search" type="search" placeholder="搜索技巧、属性或标签…" aria-label="搜索技巧" autocomplete="off">
+      </div>
+    </div>
+  </header>
 
-  <section class="tip2">
-    <header>打字效果</header>
-    <iframe height="300" style="width: 100%;" scrolling="no" title="Typing effect for text"
-      src="https://codepen.io/ximuli/embed/RwQeWpr?default-tab=html%2Cresult" frameborder="no" loading="lazy"
-      allowtransparency="true" allowfullscreen="true">
-      See the Pen <a href="https://codepen.io/ximuli/pen/RwQeWpr">
-        Typing effect for text</a> by ximuli (<a href="https://codepen.io/ximuli">@ximuli</a>)
-      on <a href="https://codepen.io">CodePen</a>.
-    </iframe>
-  </section>
+  <div class="wrap layout">
+    <aside class="toc" aria-label="目录">
+      <p class="toc-title">目录</p>
+      <div class="toc-group">
+        <p class="toc-cat">文本处理</p>
+        <a class="toc-link" href="#tip-001"><span class="toc-no">01</span>文本超出两则</a>
+      </div>
+      <div class="toc-group">
+        <p class="toc-cat">动画</p>
+        <a class="toc-link" href="#tip-002"><span class="toc-no">02</span>打字效果</a>
+      </div>
+      <p class="toc-empty" id="toc-empty" hidden>没有匹配的条目</p>
+    </aside>
 
-  <!-- 代码高亮 -->
+    <main>
+      <section class="tip" id="tip-001"
+        data-search="文本 超出 省略号 ellipsis text-overflow line-clamp 单行 多行 overflow nowrap">
+        <header class="tip-head">
+          <span class="tip-no" aria-hidden="true">01</span>
+          <div class="tip-title">
+            <h2>文本超出两则 <span class="tag">文本</span><span class="tag">省略号</span></h2>
+            <p>单行和多行文本溢出时显示省略号，最常用的两种写法。</p>
+          </div>
+        </header>
+
+        <div class="demo">
+          <div class="demo-bar">
+            <span class="demo-path">tips/001-text-overflow/demo.html</span>
+            <a class="demo-open" href="./tips/001-text-overflow/demo.html" target="_blank" rel="noopener">新窗口打开 ↗</a>
+          </div>
+          <iframe src="./tips/001-text-overflow/demo.html" title="文本超出效果演示" loading="lazy"></iframe>
+        </div>
+
+        <div class="code">
+          <div class="code-bar">
+            <span class="code-name">style.css</span>
+          </div>
+          <pre class="language-css" data-src="./tips/001-text-overflow/style.css"></pre>
+        </div>
+      </section>
+
+      <section class="tip" id="tip-002"
+        data-search="打字 打字机 文字 动画 typing typewriter animation steps keyframes 光标 闪烁">
+        <header class="tip-head">
+          <span class="tip-no" aria-hidden="true">02</span>
+          <div class="tip-title">
+            <h2>打字效果 <span class="tag">动画</span><span class="tag">打字机</span></h2>
+            <p>纯 CSS 实现逐字出现 + 光标闪烁，不依赖 JavaScript。</p>
+          </div>
+        </header>
+
+        <div class="demo">
+          <div class="demo-bar">
+            <span class="demo-path">tips/002-typing-effect/demo.html</span>
+            <a class="demo-open" href="./tips/002-typing-effect/demo.html" target="_blank" rel="noopener">新窗口打开 ↗</a>
+          </div>
+          <iframe src="./tips/002-typing-effect/demo.html" title="打字效果演示" loading="lazy"></iframe>
+        </div>
+
+        <div class="code">
+          <div class="code-bar">
+            <span class="code-name">style.css</span>
+          </div>
+          <pre class="language-css" data-src="./tips/002-typing-effect/style.css"></pre>
+        </div>
+      </section>
+
+      <p class="empty" id="empty" hidden>没有找到匹配的技巧，换个关键词试试。</p>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>每条 tip 都是仓库里可直接运行的 HTML/CSS，可离线查看。</p>
+      <p><a href="https://github.com/ximuli/css-tips" target="_blank" rel="noopener">GitHub 仓库 ↗</a> · <a
+          href="#top">回到顶部 ↑</a></p>
+    </div>
+  </footer>
+
   <script src="./assets/prism.js"></script>
+  <script>
+    (function () {
+      var input = document.getElementById('search');
+      var tips = Array.prototype.slice.call(document.querySelectorAll('.tip'));
+      var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc-link'));
+      var tocGroups = Array.prototype.slice.call(document.querySelectorAll('.toc-group'));
+      var empty = document.getElementById('empty');
+      var tocEmpty = document.getElementById('toc-empty');
+
+      function applyFilter() {
+        var q = input.value.trim().toLowerCase();
+        var shown = 0;
+
+        tips.forEach(function (tip) {
+          var hay = (tip.dataset.search + ' ' + tip.textContent).toLowerCase();
+          var hit = !q || hay.indexOf(q) !== -1;
+          tip.hidden = !hit;
+          if (hit) shown += 1;
+
+          tocLinks.forEach(function (link) {
+            if (link.getAttribute('href') === '#' + tip.id) link.hidden = !hit;
+          });
+        });
+
+        tocGroups.forEach(function (group) {
+          group.hidden = !group.querySelector('.toc-link:not([hidden])');
+        });
+
+        empty.hidden = shown !== 0;
+        tocEmpty.hidden = shown !== 0;
+      }
+
+      input.addEventListener('input', applyFilter);
+
+      // 滚动时高亮侧边目录
+      if ('IntersectionObserver' in window) {
+        var linkById = new Map(tocLinks.map(function (link) {
+          return [link.getAttribute('href').slice(1), link];
+        }));
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            tocLinks.forEach(function (link) { link.classList.remove('active'); });
+            var link = linkById.get(entry.target.id);
+            if (link) link.classList.add('active');
+          });
+        }, { rootMargin: '-15% 0px -70% 0px' });
+
+        tips.forEach(function (tip) { observer.observe(tip); });
+      }
+    })();
+  </script>
 </body>
 
 </html>

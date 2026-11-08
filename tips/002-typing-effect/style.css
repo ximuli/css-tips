@@ -1,0 +1,21 @@
+/* 打字机效果：宽度从 0 动画到 6em，steps(6) 让它逐字出现 */
+.typing-effect {
+  width: 6em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+  animation: typing 1s steps(6), effect .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes effect {
+  50% {
+    border-color: transparent;
+  }
+}

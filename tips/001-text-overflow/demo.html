@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文本超出两则 · demo</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* ↓ 仅为演示页排版，不属于 tip 代码 */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+      background: #f3f0ea;
+      color: #26231f;
+      font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    .board {
+      width: min(100%, 520px);
+      display: grid;
+      gap: 20px;
+    }
+
+    .case {
+      background: #fffdf9;
+      border: 1px solid #e2dcd1;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .case h2 {
+      margin: 0 0 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #8a8377;
+    }
+
+    .case p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3a3630;
+    }
+
+    .single {
+      max-width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="board">
+    <div class="case">
+      <h2>单行省略</h2>
+      <p class="ellipsis single">当一段文字太长而容器放不下时，用省略号收尾，保持布局不被撑破。</p>
+    </div>
+    <div class="case">
+      <h2>多行省略（3 行）</h2>
+      <p class="ellipsis-3">当一段文字太长而容器放不下时，用省略号收尾，保持布局不被撑破。这段文字故意写得长一些，用来演示多行文本被截断到第三行时，末尾自动出现省略号的效果；再多写一些，确保它一定会溢出三行，从而能清楚地看到末尾的省略号。</p>
+    </div>
+  </div>
+</body>
+
+</html>
